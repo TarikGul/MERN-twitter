@@ -43,22 +43,22 @@ class SignupForm extends React.Component {
     }
 
     renderErrors() {
-        // return (
-        //     <ul>
-        //         {Object.keys(this.state.errors).map((error, i) => (
-        //             <li key={`error-${i}`}>
-        //                 {this.state.errors[error]}
-        //             </li>
-        //         ))}
-        //     </ul>
-        // );
+        return (
+            <ul>
+                {Object.keys(this.state.errors).map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {this.state.errors[error]}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render() {
         return (
-            <div className="signup-form-container">
+            <div className="login-form-container">
                 <form onSubmit={this.handleSubmit}>
-                    <div className="signup-form">
+                    <div className="login-form">
                         <br />
                         <input type="text"
                             value={this.state.email}
@@ -69,7 +69,7 @@ class SignupForm extends React.Component {
                         <input type="text"
                             value={this.state.name}
                             onChange={this.update('name')}
-                            placeholder="name"
+                            placeholder="Handle"
                         />
                         <br />
                         <input type="password"
